@@ -36,7 +36,7 @@ public class ProductosRepositorio
 
     public List<Productos> getPrecio(double precio)
     {
-        return productosCrudRepositorio.findByPrice(precio);
+        return productosCrudRepositorio.findByPriceLessThanEqual(precio);
     }
 
     public List<Productos> getDescripcion(String des)
