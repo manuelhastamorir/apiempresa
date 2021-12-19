@@ -1,6 +1,6 @@
 package com.empresa.empresa.repository.crud;
 
-import java.util.Optional;
+import java.util.*;
 
 import com.empresa.empresa.model.Usuarios;
 
@@ -11,4 +11,5 @@ public interface UsuariosCrudRepositorio extends MongoRepository<Usuarios,Intege
     //Consultar si existe email
     public Optional<Usuarios> findByEmail(String email);
     public Optional<Usuarios> findByEmailAndPassword(String email,String password);
+    public List<Usuarios> findByMonthBirthtDay(String mesCumple);
 }

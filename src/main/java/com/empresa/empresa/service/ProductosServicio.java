@@ -88,5 +88,13 @@ public class ProductosServicio {
         return productosRepositorio.getProducto(id);    
     }
 
-    
+    public List<Productos> getPrecio(double precio)
+    {
+        return productosRepositorio.getPrecio(precio);
+    }
+
+    public List<Productos> getDescripcion (String des)
+    {
+        return productosRepositorio.getDescripcion(des);
+    }
 }

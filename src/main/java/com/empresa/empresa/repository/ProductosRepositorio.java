@@ -33,4 +33,14 @@ public class ProductosRepositorio
     {
         return productosCrudRepositorio.findById(id);
     }
+
+    public List<Productos> getPrecio(double precio)
+    {
+        return productosCrudRepositorio.findByPrice(precio);
+    }
+
+    public List<Productos> getDescripcion(String des)
+    {
+        return productosCrudRepositorio.findByDescriptionContaining(des);
+    }
 }

@@ -48,4 +48,15 @@ public class ProductosControlador
     {
         return productosServicio.getProducto(id);
     }
+    @GetMapping("/price/{precio}")
+    public List<Productos> getPrecio(@PathVariable ("precio") double precio)
+    {
+        return productosServicio.getPrecio(precio);
+    }
+    @GetMapping("/description/{des}")
+    public List<Productos> getDescripcion(@PathVariable ("des") String des)
+    {
+        return productosServicio.getDescripcion(des);
+    }
+
 }

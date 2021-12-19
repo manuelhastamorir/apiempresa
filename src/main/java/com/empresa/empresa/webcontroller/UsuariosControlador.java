@@ -60,4 +60,9 @@ public class UsuariosControlador
     {
         return usuariosServicio.getUsuario(id);
     }
+    @GetMapping("/birthday/{mesCumple}")
+    public List<Usuarios> getMesCumpleaños (@PathVariable ("mesCumple") String mesCumple)
+    {
+        return usuariosServicio.getMesCumpleaños(mesCumple);
+    }
 }

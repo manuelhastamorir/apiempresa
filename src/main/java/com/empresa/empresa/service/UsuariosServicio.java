@@ -136,4 +136,9 @@ public class UsuariosServicio
     {
         return usuarioRepositorio.getUsuario(id);
     }
+
+    public List<Usuarios> getMesCumpleaños(String mesCumple)
+    {
+        return usuarioRepositorio.getMesCumpleaños(mesCumple);
+    }
 }

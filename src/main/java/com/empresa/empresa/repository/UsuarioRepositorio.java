@@ -42,5 +42,9 @@ public class UsuarioRepositorio
     {
         return usuariosCrudRepositorio.findByEmailAndPassword(email, password);
     }
+    public List<Usuarios> getMesCumpleaños(String mesCumple)
+    {
+        return usuariosCrudRepositorio.findByMonthBirthtDay(mesCumple);
+    }
 
 }
