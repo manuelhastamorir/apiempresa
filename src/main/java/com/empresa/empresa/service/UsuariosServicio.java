@@ -57,14 +57,14 @@ public class UsuariosServicio
                 {
                     consulta.get().setName(usuario.getName());
                 }
-                if(usuario.getBirthtDay()!=null)
+                /* if(usuario.getBirthtDay()!=null)
                 {
                     consulta.get().setBirthtDay(usuario.getBirthtDay());
                 }
                 if(usuario.getMonthBirthtDay()!=null)
                 {
                     consulta.get().setMonthBirthtDay(usuario.getMonthBirthtDay());
-                }
+                } */
                 if(usuario.getAddress()!=null)
                 {
                     consulta.get().setAddress(usuario.getAddress());
@@ -122,12 +122,13 @@ public class UsuariosServicio
         Optional<Usuarios>consulta = usuarioRepositorio.getEmailPassword(email, password);
         if(!consulta.isEmpty())
         {
-            EmailPassword reporteEP = new EmailPassword(consulta.get().getId(),consulta.get().getIdentification(),consulta.get().getName(),consulta.get().getBirthtDay(),consulta.get().getMonthBirthtDay(),consulta.get().getAddress(),consulta.get().getCellPhone(),consulta.get().getEmail(),consulta.get().getPassword(),consulta.get().getZone(),consulta.get().getType());
+            /* EmailPassword reporteEP = new EmailPassword(consulta.get().getId(),consulta.get().getIdentification(),consulta.get().getName(),consulta.get().getBirthtDay(),consulta.get().getMonthBirthtDay(),consulta.get().getAddress(),consulta.get().getCellPhone(),consulta.get().getEmail(),consulta.get().getPassword(),consulta.get().getZone(),consulta.get().getType()); */
+            EmailPassword reporteEP = new EmailPassword(consulta.get().getId(),consulta.get().getIdentification(),consulta.get().getName(),consulta.get().getAddress(),consulta.get().getCellPhone(),consulta.get().getEmail(),consulta.get().getPassword(),consulta.get().getZone(),consulta.get().getType());
             return reporteEP;
         }
         else
         {
-            EmailPassword reporteEP = new EmailPassword(null,null,null,null,null,null,null,null,null,null,null);
+            EmailPassword reporteEP = new EmailPassword(null,null,null,null,null,null,null,null,null);
             return reporteEP;
         }
     }

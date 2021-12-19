@@ -7,8 +7,8 @@ public class EmailPassword
     private Integer id;
     private String identification;
     private String name;
-    private Date birthtDay;
-    private String monthBirthtDay;
+    //private Date birthtDay;
+    //private String monthBirthtDay;
     private String address;
     private String cellPhone;
     private String email;
@@ -16,13 +16,13 @@ public class EmailPassword
     private String zone;
     private String type;
 
-    public EmailPassword(Integer id, String identification, String name, Date birthtDay, String monthBirthtDay,
+    public EmailPassword(Integer id, String identification, String name,
             String address, String cellPhone, String email, String password, String zone, String type) {
         this.id = id;
         this.identification = identification;
         this.name = name;
-        this.birthtDay = birthtDay;
-        this.monthBirthtDay = monthBirthtDay;
+        //this.birthtDay = birthtDay;
+        //this.monthBirthtDay = monthBirthtDay;
         this.address = address;
         this.cellPhone = cellPhone;
         this.email = email;
@@ -55,7 +55,7 @@ public class EmailPassword
         this.name = name;
     }
 
-    public Date getBirthtDay() {
+    /* public Date getBirthtDay() {
         return birthtDay;
     }
 
@@ -69,7 +69,7 @@ public class EmailPassword
 
     public void setMonthBirthtDay(String monthBirthtDay) {
         this.monthBirthtDay = monthBirthtDay;
-    }
+    } */
 
     public String getAddress() {
         return address;
